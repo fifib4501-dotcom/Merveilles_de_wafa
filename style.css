@@ -18,3 +18,50 @@ form{display:grid;gap:13px}input,select,textarea{width:100%;padding:14px 16px;bo
 footer{text-align:center;padding:18px;background:#8f3155;color:#fff;font-size:12px}
 @media(max-width:900px){nav{display:none}.navbar{padding:0 5%}.hero{grid-template-columns:1fr}.hero-image{min-height:360px;order:-1}.hero-content{padding:55px 8%}.cards{grid-template-columns:repeat(2,1fr)}.gallery{grid-template-columns:repeat(2,1fr)}.order-section{grid-template-columns:1fr;padding:65px 8%}h1{font-size:55px}}
 @media(max-width:520px){.nav-btn{display:none}.cards{grid-template-columns:1fr}.gallery{grid-template-columns:1fr 1fr}.gallery-item{height:145px}h1{font-size:48px}.hero-image{min-height:280px}}
+/* Smooth animations for Merveilles de Wafaa */
+
+.hero-image {
+  animation: cakeZoom 5s ease-in-out infinite alternate;
+  transform-origin: center;
+}
+
+.product-photo,
+.gallery-item {
+  animation: sweetFloat 4s ease-in-out infinite;
+  transition: transform 0.5s ease;
+}
+
+.product-photo:hover,
+.gallery-item:hover {
+  transform: scale(1.06);
+}
+
+@keyframes cakeZoom {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.04);
+  }
+}
+
+@keyframes sweetFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-image,
+  .product-photo,
+  .gallery-item {
+    animation: none;
+  }
+}
