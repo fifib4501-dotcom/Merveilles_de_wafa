@@ -9,3 +9,35 @@ function sendOrder(e){
   const whatsappNumber='213XXXXXXXXX';
   window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`,'_blank');
 }
+document.addEventListener("DOMContentLoaded", function () {
+  const photos = [
+    "Screenshot_20261022_110033_Instagram.jpg",
+    "Screenshot_20261022_110015_Instagram.jpg"
+  ];
+
+  const gallery = document.querySelectorAll(".gallery-item");
+
+  gallery.forEach(function (item, index) {
+    item.style.backgroundImage = `url("${photos[index % photos.length]}")`;
+    item.style.backgroundSize = "cover";
+    item.style.backgroundPosition = "center";
+  });
+
+  let current = 0;
+
+  if (gallery.length > 0) {
+    setInterval(function () {
+      current = (current + 1) % photos.length;
+
+      gallery.forEach(function (item, index) {
+        item.style.opacity = "0.4";
+
+        setTimeout(function () {
+          item.style.backgroundImage =
+            `url("${photos[(current + index) % photos.length]}")`;
+          item.style.opacity = "1";
+        }, 300);
+      });
+    }, 3000);
+  }
+});
