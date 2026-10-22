@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Merveilles de Wafaa — Pâtisserie artisanale</title>
+  <meta name="description" content="Merveilles de Wafaa — pâtisserie artisanale faite avec amour.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <a class="logo" href="#accueil">Merveilles <span>de Wafaa</span></a>
+    <nav>
+      <a href="#accueil">Accueil</a>
+      <a href="#produits">Nos produits</a>
+      <a href="#galerie">Galerie</a>
+      <a href="#commander">Commander</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="nav-btn" href="#commander">Commander</a>
+  </header>
+
+  <main>
+    <section id="accueil" class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">PÂTISSERIE FAITE AVEC AMOUR</p>
+        <h1>Merveilles<br><em>de Wafaa</em></h1>
+        <p>Des douceurs artisanales pour vos moments spéciaux et vos petites envies du quotidien.</p>
+        <a class="btn" href="#produits">Découvrir nos créations →</a>
+      </div>
+      <div class="hero-image"></div>
+    </section>
+
+    <section id="produits" class="section">
+      <div class="section-title">
+        <span>♡</span>
+        <h2>Nos créations</h2>
+        <p>Des recettes gourmandes, des ingrédients de qualité et un savoir-faire artisanal.</p>
+      </div>
+      <div class="cards">
+        <article class="card"><div class="product-photo photo-madeleine"></div><h3>Madeleines</h3><p>Moelleuses et délicieuses, au chocolat, à la vanille et bien plus...</p><a href="#commander">Commander</a></article>
+        <article class="card"><div class="product-photo photo-assortiment"></div><h3>Assortiments</h3><p>Un mélange de saveurs pour le plaisir des yeux et du palais.</p><a href="#commander">Commander</a></article>
+        <article class="card"><div class="product-photo photo-gateau"></div><h3>Gâteaux</h3><p>Pour toutes vos occasions : anniversaires, fêtes et petits moments de bonheur.</p><a href="#commander">Commander</a></article>
+        <article class="card"><div class="product-photo photo-biscuits"></div><h3>Biscuits</h3><p>Croustillants, fondants, à chaque bouchée une surprise.</p><a href="#commander">Commander</a></article>
+      </div>
+    </section>
+
+    <section id="galerie" class="gallery-section">
+      <div class="section-title">
+        <span>♡</span>
+        <h2>Galerie</h2>
+        <p>Un aperçu de nos créations.</p>
+      </div>
+      <div class="gallery">
+        <div class="gallery-item"></div><div class="gallery-item"></div><div class="gallery-item"></div>
+        <div class="gallery-item"></div><div class="gallery-item"></div>
+      </div>
+    </section>
+
+    <section id="commander" class="order-section">
+      <div>
+        <p class="eyebrow">UNE COMMANDE SUR MESURE</p>
+        <h2>Faites-vous plaisir 💕</h2>
+        <p>Choisissez vos douceurs et contactez-nous pour confirmer votre commande.</p>
+      </div>
+      <form onsubmit="sendOrder(event)">
+        <input id="name" type="text" placeholder="Votre nom" required>
+        <select id="product" required>
+          <option value="">Choisir un produit</option>
+          <option>Madeleines</option>
+          <option>Assortiment</option>
+          <option>Gâteau</option>
+          <option>Biscuits</option>
+        </select>
+        <input id="quantity" type="number" min="1" placeholder="Quantité" required>
+        <textarea id="message" placeholder="Détails de la commande"></textarea>
+        <button class="btn" type="submit">Envoyer la commande</button>
+      </form>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Merveilles de Wafaa</h2>
+      <p>Pâtisserie artisanale faite avec amour.</p>
+      <div class="contact-links">
+        <a href="#" aria-label="Instagram">Instagram</a>
+        <a href="#" aria-label="WhatsApp">WhatsApp</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>© 2026 Merveilles de Wafaa · Tous droits réservés</footer>
+  <script src="script.js"></script>
+</body>
+</html>
