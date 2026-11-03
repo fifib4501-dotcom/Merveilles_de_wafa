@@ -314,3 +314,48 @@ footer {
   h1 { font-size: 48px; }
   .hero-image { min-height: 280px; }
 }
+/* Merveilles de Wafaa - Animated Logo */
+
+.animated-logo {
+  display: inline-flex;
+  align-items: baseline;
+  text-decoration: none;
+  font-family: cursive;
+  color: #B58A62;
+  animation: logoAppear 1.8s ease both;
+}
+
+.big-m {
+  font-size: 2.5em;
+  color: #C49A56;
+  font-style: italic;
+  animation: goldenGlow 3s ease-in-out infinite alternate;
+}
+
+.logo-rest {
+  color: #B87989;
+  font-size: 1.1em;
+  font-style: italic;
+}
+
+.logo-de {
+  margin-left: 7px;
+  color: #C49A56;
+  font-style: italic;
+}
+
+.logo-wafaa {
+  margin-left: 5px;
+  color: #B87989;
+  font-style: italic;
+}
+
+@keyframes logoAppear {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes goldenGlow {
+  from { text-shadow: 0 0 1px #D8B879; }
+  to { text-shadow: 0 0 9px #D8B879; }
+}
